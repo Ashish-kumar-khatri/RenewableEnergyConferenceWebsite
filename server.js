@@ -54,15 +54,15 @@ app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended:false}));  //get data from forms and make it available in post method ko request ma
 app.use(express.json())   //form bata ako data lai json ma parse garxa
-app.use(
-    session({
-        key: 'keyin',
-        secret: "this is key that sign cookie",
-        store: sessionStore,
-        resave: false,
-        saveUninitialized: false,
-    })
-);
+// app.use(
+//     session({
+//         key: 'keyin',
+//         secret: "this is key that sign cookie",
+//         store: sessionStore,
+//         resave: false,
+//         saveUninitialized: false,
+//     })
+// );
 
 //define all routes
 
