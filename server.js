@@ -5,7 +5,7 @@ const path =require('path');
 // const upload = multer()
 
 const session = require('express-session');
-const MySQLStore = require('express-mysql-session')(session)     //overwrite dot method
+// const MySQLStore = require('express-mysql-session')(session)     //overwrite dot method
 //var cookieParser = require('cookie-parser')
 
 
