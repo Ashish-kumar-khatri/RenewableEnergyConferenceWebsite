@@ -17,34 +17,34 @@ dotenv.config({path: './.env'});
 
 //Connecting to mysql (make a database named Travewire)
 const mysql = require('mysql');
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: process.env.DATABASE,
-    database: 'Travewire'
-});
-db.connect((error)=>{
-    if(error){
-        console.log(error);
-    }
-    else{
-        console.log('Connected to mysql...');
-    }
-});
+// const db = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: process.env.DATABASE,
+//     database: 'Travewire'
+// });
+// db.connect((error)=>{
+//     if(error){
+//         console.log(error);
+//     }
+//     else{
+//         console.log('Connected to mysql...');
+//     }
+// });
 
 //connection of session with database
-var sessionStore = new MySQLStore({
-    expiration:10800000,
-    createDatabaseTable: false,
-    schema:{
-        tableName: 'sessiontbl',
-        columnNames:{
-            session_id: 'session_id',
-            expires: 'expires',
-            data: 'data'
-        }
-    }
-},db);
+// var sessionStore = new MySQLStore({
+//     expiration:10800000,
+//     createDatabaseTable: false,
+//     schema:{
+//         tableName: 'sessiontbl',
+//         columnNames:{
+//             session_id: 'session_id',
+//             expires: 'expires',
+//             data: 'data'
+//         }
+//     }
+// },db);
 
 //for keeping the files of css 
 app.use(express.static("public"));
